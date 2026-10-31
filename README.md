@@ -118,7 +118,7 @@ scripts/                    serve, check, package_site, vendor, make_icons (Pyth
 ```
 
 ## Privacy model
-
+ 
 - Only each entry's date and last-modified time are stored unencrypted.
 - The text, mood and prompt are encrypted, using the date as authenticated data.
 - The key is non-extractable and kept in memory only, and it is discarded when the journal locks.
