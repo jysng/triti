@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Write privately with Triti, a free, encrypted daily journal that works offline. Track moods, build writing streaks, and keep your entries on your device.">
+  <meta name="application-name" content="Triti">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Triti">
+  <meta property="og:title" content="Triti — Private, Encrypted Daily Journal">
+  <meta property="og:description" content="A free, private daily journal that works offline. Track moods, build writing streaks, and keep your entries on your device.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Triti — Private, Encrypted Daily Journal">
+  <meta name="twitter:description" content="A free, private daily journal that works offline. Your entries stay encrypted on your device.">
+  <!-- SEO:DEPLOY-URL:START -->
+  <!-- Filled with the published URL by scripts/package_site.py. -->
+  <!-- SEO:DEPLOY-URL:END -->
+  <meta name="triti-analytics" content="">
+  <meta name="theme-color" content="#faf8f5">
+  <title>Triti — Private, Encrypted Daily Journal</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="./css/app.css">
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+  <button type="button" class="skip-link" id="skip-link">Skip to content</button>
+  <header class="topbar" id="topbar" hidden>
+    <a class="brand" href="#/day" aria-label="Triti, go to today">
+      <img src="./icons/icon.svg" alt="" width="28" height="28">
+      <span>Triti</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#/day" data-route="day"><span aria-hidden="true">✎</span><span class="nav-label">Today</span></a>
+      <a href="#/calendar" data-route="calendar"><span aria-hidden="true">▦</span><span class="nav-label">Calendar</span></a>
+      <a href="#/search" data-route="search"><span aria-hidden="true">⌕</span><span class="nav-label">Search</span></a>
+      <a href="#/insights" data-route="insights"><span aria-hidden="true">◔</span><span class="nav-label">Insights</span></a>
+      <a href="#/settings" data-route="settings"><span aria-hidden="true">⚙</span><span class="nav-label">Settings</span></a>
+    </nav>
+    <button type="button" class="icon-btn lock-btn" id="lock-btn" aria-label="Lock journal" title="Lock (Ctrl/⌘+Shift+L)">🔒</button>
+  </header>
+  <main id="main" tabindex="-1">
+    <noscript><p class="lock-screen">Triti needs JavaScript to encrypt and store your journal.</p></noscript>
+  </main>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+</body>
+</html>

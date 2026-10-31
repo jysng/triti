@@ -1,0 +1,6 @@
+body { font: 15px/1.5 system-ui, sans-serif; margin: 2rem; color: #222; }
+ul { list-style: none; padding: 0; }
+li { padding: 2px 0; font-family: ui-monospace, monospace; font-size: 13px; }
+.pass { color: #17803d; }
+.fail { color: #c62828; font-weight: 600; }
+#summary { font-size: 1.2rem; }
