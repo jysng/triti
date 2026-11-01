@@ -1,8 +1,31 @@
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
-  <script data-goatcounter="https://triti.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+<!-- 1. Load the script but tell it NOT to track the initial page load automatically -->
+<script data-goatcounter="https://triti.goatcounter.com/count"
+        data-goatcounter-settings='{"no_onload": true}'
+        async src="https://zgo.at"></script>
+
+<!-- 2. Manually trigger counts every time the path/hash updates -->
+<script>
+    window.addEventListener('hashchange', function() {
+        if (window.goatcounter && window.goatcounter.count) {
+            window.goatcounter.count({
+                path: location.pathname + location.hash
+            });
+        }
+    });
+
+    // Also trigger a count on the very first initial load once the window is ready
+    window.addEventListener('load', function() {
+        if (window.goatcounter && window.goatcounter.count) {
+            window.goatcounter.count({
+                path: location.pathname + location.hash
+            });
+        }
+    });
+</script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
