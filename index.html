@@ -8,22 +8,25 @@
 
 <!-- 2. Manually trigger counts every time the path/hash updates -->
 <script>
-    window.addEventListener('hashchange', function() {
-        if (window.goatcounter && window.goatcounter.count) {
-            window.goatcounter.count({
-                path: location.pathname + location.hash
-            });
-        }
-    });
+  // Count the hash as part of the path on the initial load too
+  window.goatcounter = {
+    path: function () {
+      return location.pathname + location.search + location.hash;
+    }
+  };
+</script>
+<script data-goatcounter="https://triti.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 
-    // Also trigger a count on the very first initial load once the window is ready
-    window.addEventListener('load', function() {
-        if (window.goatcounter && window.goatcounter.count) {
-            window.goatcounter.count({
-                path: location.pathname + location.hash
-            });
-        }
-    });
+<script>
+  // Count again whenever the hash changes (hash-based navigation)
+  window.addEventListener('hashchange', function () {
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({
+        path: location.pathname + location.search + location.hash
+      });
+    }
+  });
 </script>
 
   <meta charset="utf-8">
