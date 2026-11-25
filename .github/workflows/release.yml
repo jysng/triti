@@ -5,7 +5,7 @@ name: Release
 # Requires: Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests".
 on:
   push:
-    branches: [main]
+    branches: [main, master]
 
 permissions:
   contents: write
