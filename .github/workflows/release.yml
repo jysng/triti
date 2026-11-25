@@ -1,0 +1,21 @@
+name: Release
+
+# Opens/updates a release PR from Conventional Commits. Merging it bumps
+# version.txt, updates CHANGELOG.md and creates a GitHub release + tag.
+# Requires: Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests".
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
