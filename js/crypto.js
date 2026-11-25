@@ -1,7 +1,7 @@
 // @ts-check
 // Web Crypto only. Passphrase -> PBKDF2-SHA256 -> AES-GCM-256 key (non-extractable).
 // Every encryption uses a fresh random 12-byte IV; additional data binds a
-// ciphertext to its context (e.g. the entry date) so records can't be swapped.
+// ciphertext to its context (e.g. the entry date) so records can't be swapped. 
 
 export const PBKDF2_ITERATIONS = 600_000;
 
