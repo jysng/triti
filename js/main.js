@@ -26,7 +26,7 @@ function fatal(message) {
 const settings = loadSettings();
 applySettings(settings);
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => applySettings(settings));
-countVisit(settings);
+//countVisit(settings);
 
 async function boot() {
   if (!globalThis.crypto?.subtle) {
