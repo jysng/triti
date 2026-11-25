@@ -2,7 +2,7 @@
 import { DB } from './db.js';
 import { isValidKey, today } from './dates.js';
 import { Journal } from './journal.js';
-import { countVisit } from './analytics.js';
+//import { countVisit } from './analytics.js';
 import { applySettings, loadSettings, saveSettings } from './settings.js';
 import { h, toast } from './ui/dom.js';
 import { Vault } from './vault.js';
