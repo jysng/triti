@@ -2,7 +2,7 @@
 import { DB } from './db.js';
 import { isValidKey, today } from './dates.js';
 import { Journal } from './journal.js';
-//import { countVisit } from './analytics.js';
+import { countVisit } from './analytics.js';
 import { applySettings, loadSettings, saveSettings } from './settings.js';
 import { h, toast } from './ui/dom.js';
 import { Vault } from './vault.js';
@@ -26,7 +26,7 @@ function fatal(message) {
 const settings = loadSettings();
 applySettings(settings);
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => applySettings(settings));
-//countVisit(settings);
+countVisit(settings);
 
 async function boot() {
   if (!globalThis.crypto?.subtle) {
